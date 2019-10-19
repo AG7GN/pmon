@@ -2,7 +2,7 @@
 Name=PMON
 GenericName=PACTOR Monitor
 Comment=An Independent Pactor/Winlink Monitor For The Raspberry Pi
-Exec=sh -c /usr/local/bin/pmon.sh
+Exec=lxterminal --geometry=120x40 -t /usr/local/bin/pmon.sh -e
 Icon=/usr/share/icons/Adwaita/32x32/actions/mail-message-new.png
 Terminal=false
 Type=Application
