@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.0.4" 
+VERSION="1.0.5" 
 
 # This script allows the user to change the title bar of Fldigi suite and Direwolf
 # applications so they say something other than "Left Radio" or "Right Radio"
