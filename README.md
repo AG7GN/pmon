@@ -21,12 +21,12 @@ PMON automatically decompresses LZHUF compressed messages on the fly. This is ve
 
 Pick either Easy or Manual Installation below.
 
-### Easy Installation (Hampi Only)
+### Easy Installation and Upgrading (Hampi Only)
 
 1. Click __Raspberry > Hamradio > Update Pi and Ham Apps__.
 1. Check __pmon__, click __OK__.
 
-### Manual Installation
+### Manual Installation and Upgrading
 
 1. Open a Terminal and run these commands:
 
