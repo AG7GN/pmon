@@ -33,11 +33,11 @@ Pick either Easy or Manual Installation below.
 	- Run these commands the first time you install `pmon`.  They add the `pmon` repository to your Pi:
 	
 			echo "deb https://www.scs-ptc.com/repo/packages/ buster non-free" | sudo tee /etc/apt/sources.list.d/scs.list > /dev/null
-			wget -q -O - ${PMON_REPO}scs.gpg.key | sudo apt-key add -
+			wget -q -O - https://www.scs-ptc.com/repo/packages/scs.gpg.key | sudo apt-key add -
 			sudo apt update
 			sudo apt install pmon
 		
-	- Thereafter, to update `pmon`, run these commands to keep `pmon` updated:
+	- Thereafter, run these commands to keep `pmon` updated:
 	
 			sudo apt update
 			sudo apt upgrade pmon
@@ -59,7 +59,7 @@ Pick either Easy or Manual Installation below.
 
 ## Operational Notes
 
-`pmon` does not work with PulseAudio, which Hampi uses extensively to support 2 radios with Fldigi and Direwolf and other ham applications.  The `pmon.sh` script in this repository, when used to start pmon, temporarily suspends PulseAudio's use of the Fe-Pi sound card, thereby giving `pmon` the exclusive use of the card it requires.  When you quit pmon, PulseAudio automatically regains control of the sound card.  
+`pmon` does not work with PulseAudio, which Hampi uses extensively to support 2 radios with Fldigi and Direwolf and other ham applications.  The `pmon.sh` script in this repository, when used to start `pmon`, temporarily suspends PulseAudio's use of the Fe-Pi sound card, thereby giving `pmon` the exclusive use of the card.  When you quit `pmon`, PulseAudio automatically regains control of the sound card.  
 
 I recommend always starting `pmon` from the menu, and always stop all other applications that use the sound card prior to running `pmon`.
 
