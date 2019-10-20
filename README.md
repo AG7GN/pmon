@@ -1,4 +1,4 @@
-# Hampi scripts supporting PMON - An Independent Pactor/Winlink Monitor For The Raspberry Pi
+# Hampi scripts supporting PMON - An Independent Pactor/Winlink Monitor for the Raspberry Pi
 
 Version 20191020
 
