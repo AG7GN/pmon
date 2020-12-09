@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.0.6" 
+VERSION="1.0.7" 
 
 # This script allows the user to change the title bar of Fldigi suite and Direwolf
 # applications so they say something other than "Left Radio" or "Right Radio"
@@ -56,7 +56,7 @@ pcm.pmon-right {
 }
 pcm.pmon-left {
    type plug
-   slave.pcm "hw:1,0"
+   slave.pcm "$CARD"
 }
 EOF
 	fi
