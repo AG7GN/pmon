@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.0.5" 
+VERSION="1.0.6" 
 
 # This script allows the user to change the title bar of Fldigi suite and Direwolf
 # applications so they say something other than "Left Radio" or "Right Radio"
@@ -30,9 +30,11 @@ function errorReport () {
 
 
 function configAlsa () {
-   CARD="$($(command -v pmon) -a ? | grep -m1 -o "^hw:[0-9],[0-9]")"
-   [ -f $HOME/.asoundrc ] && mv $HOME/.asoundrc $HOME/.asoundrc-backup
-   cat > $HOME/.asoundrc <<EOF
+   if ! grep -q "pmon-right"
+   then 
+	   CARD="$($(command -v pmon) -a ? | grep -m1 -o "^hw:[0-9],[0-9]")"
+   	[[ -f $HOME/.asoundrc ]] && mv $HOME/.asoundrc $HOME/.asoundrc-backup
+   	cat >> $HOME/.asoundrc <<EOF
 pcm.pmon-right {
    type asym
    capture.pcm {
@@ -57,6 +59,7 @@ pcm.pmon-left {
    slave.pcm "hw:1,0"
 }
 EOF
+	fi
 }
 
 command -v pmon || errorReport "pmon not found" 1
